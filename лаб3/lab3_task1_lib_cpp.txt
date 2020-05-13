@@ -1,0 +1,12 @@
+#include"newstringlibrary.h"
+extern "C" string strproc(string str1, string str2, int n) {
+	int str1len = str1.size();
+	if (str1len > n) return str1;
+int i = 0;
+	for (int j = 0; i < str1len; j++) {
+i = i + n;
+//т.к. элементы начинаются с 0, а 0+n = n нам необходимо отнять 1 у i
+		str1[i-1] = str2[j];
+	}
+	return str1;
+}

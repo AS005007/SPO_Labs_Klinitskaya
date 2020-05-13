@@ -1,0 +1,6 @@
+#include<stdio.h>
+int fproc(char *fname, char *nfname)
+{
+if(rename(fname, nfname)) return 0;
+else return 1;
+}

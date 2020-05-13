@@ -1,0 +1,11 @@
+#pragma once
+#ifdef NEWSTRINGLIBRARY_EXPORTS
+#define NEWSTRINGLIBRARY __declspec(dllexport)
+#else
+#define NEWSTRINGLIBRARY __declspec(dllimport)
+#endif // NEWSTRINGLIBRARY_EXPORTS
+#include<string>
+
+using namespace std;
+//расшариваем функцию на два файла
+extern "C" NEWSTRINGLIBRARY string strproc(string str1, string str2, int n);
