@@ -1,0 +1,25 @@
+from gpio import *
+from time import *
+
+def main():
+	pinMode(2, OUT)
+	pinMode(3, OUT)
+	pinMode(4, IN)
+	print("Blinking")
+	while True:
+		print("Sensor:");
+		print(analogRead(4));
+		treal=analogRead(4)*200/1023-100;
+		print("Celsius:");
+		print(treal);
+		if treal <= 23:
+			digitalWrite(3, LOW);
+			digitalWrite(2, HIGH);
+			delay(1000);
+			
+		else:
+			digitalWrite(3, HIGH);
+			digitalWrite(2, LOW);
+			delay(1000);
+if __name__ == "__main__":
+main()
