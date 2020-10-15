@@ -1,7 +1,0 @@
-#include<stdio.h>
-int main(){
-int check = fproc("test1","successfull");
-if(check) puts("Change successfull");
-else puts("Error");
-return 0;
-}
